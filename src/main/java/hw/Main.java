@@ -1,16 +1,20 @@
 package hw;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
   public static void main(final String[] args) {
+    System.out.println("Enter a positive integer: ");
+    Scanner scanner = new Scanner(System.in);
+    int input = scanner.nextInt();
+
     int max = 0;
     if (args.length > 0) {
       try {
-        max = Integer.parseInt(args[0]);
-      }
-      catch (NumberFormatException e) {
+        max = Integer.parseInt(String.valueOf(input));
+      } catch (NumberFormatException e) {
         System.err.println("The argument entered must be an integer. Please, try again! ");
 //In our case, you can use System.out.println.
         System.exit(1);
@@ -22,12 +26,18 @@ public class Main {
        */
     }
 
-    if (Integer.parseInt(args[0]) < 0) {
-      System.out.println("Only positive integers, please. Try again!"); }
-
-      FizzBuzz.fizzBuzz(max);
-
+    if (Integer.parseInt(String.valueOf(input)) < 0) {
+      System.out.println("Only positive integers, please. Try again!");
     }
 
-}
+    FizzBuzz.fizzBuzz(max);
 
+    String[] fizzBuzzFinal;
+
+    fizzBuzzFinal = FizzBuzz.fizzBuzzArray(input);
+
+    System.out.println(Arrays.toString(fizzBuzzFinal));
+
+  }
+
+    }
