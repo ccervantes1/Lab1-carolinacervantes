@@ -42,5 +42,24 @@ public class FizzBuzz {
     }
     return Final;
   }
-
+  public static List<String> fizzBuzzList(int n){
+    List<String> printList = new ArrayList<>();
+    if (n >= 0) {
+      for (int i = 1; i<=n; i++){
+        if (i % 3 == 0 & i % 5 == 0) {
+          printList.add("FizzBuzz");
+        }
+        else if (i % 3 == 0) {
+          printList.add("Fizz");
+        }
+        else if (i % 5 == 0) {
+          printList.add("Buzz");
+        }
+        else {
+          printList.add(String.valueOf(i));
+        }
+      }
+    }
+    return printList;
+  }
 }
