@@ -1,12 +1,22 @@
 package hw;
 
-public class HelloWorld {
+public class FizzBuzz {
 
-  public String getMessage() {
-    return "hello world";
-  }
+  public static void fizzBuzz(int n) {
+    for (int i = 1; i<=n; i++){
+      if (i % 15 == 0){
+        System.out.println("FizzBuzz" + " "); }
 
-  public int getYear() {
-    return 2017;
+      else if (i % 3 == 0){
+        System.out.println("Fizz" + " "); }
+
+      else if (i % 5 == 0){
+        System.out.println("Buzz"+ " "); }
+
+
+      else{
+        System.out.println(i + " "); }
+
+    }
   }
 }
